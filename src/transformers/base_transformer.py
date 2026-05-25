@@ -18,5 +18,5 @@ class BaseTransformer(ABC):
         if df.empty:
             return df
         df = df.copy()
-        df.columns = [col.lower() for col in df.columns]
+        df.columns = [str(col).lower() for col in df.columns]
         return df
