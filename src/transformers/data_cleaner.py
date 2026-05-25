@@ -26,7 +26,7 @@ class DataCleaner(BaseTransformer):
         return df
 
     def _clean_strings(self, df: pd.DataFrame) -> pd.DataFrame:
-        for col in df.select_dtypes(include="object").columns:
+        for col in df.select_dtypes(include="str").columns:
             df[col] = df[col].astype(str).str.strip().replace("nan", None)
         return df
 
