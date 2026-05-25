@@ -1,0 +1,25 @@
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.12.0
+
+# Linting & Formatting
+black>=24.0.0
+isort>=5.13.0
+flake8>=7.0.0
+
+# Type Checking
+mypy>=1.8.0
+
+# Jupyter
+jupyter>=1.0.0
+notebook>=7.0.0
+
+# HTTP Mocking
+respx>=0.21.0
+
+# Data Quality
+great-expectations>=0.18.0
+
+# Dev Utilities
+ipython>=8.20.0
