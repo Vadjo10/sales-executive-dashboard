@@ -1,44 +1,44 @@
-# Sales Executive Dashboard
+# Dashboard Executivo de Vendas
 
-End-to-end data engineering project that extracts data from the Fake Store API, transforms and processes it, stores it in PostgreSQL, and delivers executive insights through interactive Power BI dashboards.
+Projeto completo de engenharia de dados que extrai dados da Fake Store API, transforma e processa, armazena em PostgreSQL e entrega insights executivos através de dashboards interativos no Power BI.
 
-## Architecture
+## Arquitetura
 
 ```
 Fake Store API → Python ETL → PostgreSQL → Power BI Dashboard
 ```
 
-## Tech Stack
+## Stack Tecnológico
 
-| Layer | Technology |
-|-------|-----------|
-| Extraction | Python, httpx |
-| Processing | Pandas, Pydantic |
-| Storage | PostgreSQL, SQLAlchemy |
-| Scheduling | APScheduler |
-| Visualization | Power BI |
+| Camada | Tecnologia |
+|--------|-----------|
+| Extração | Python, httpx |
+| Processamento | Pandas, Pydantic |
+| Armazenamento | PostgreSQL, SQLAlchemy |
+| Agendamento | APScheduler |
+| Visualização | Power BI |
 
-## Project Structure
+## Estrutura do Projeto
 
 ```
 src/
-├── config.py          # Configuration management
-├── logger.py          # Centralized logging
-├── extractors/        # API data extraction
-├── transformers/      # Data cleaning & enrichment
-├── loaders/           # PostgreSQL loading
-├── models/            # SQLAlchemy ORM models
-├── pipeline.py        # ETL orchestration
-└── utils/             # Shared utilities
+├── config.py          # Gerenciamento de configuração
+├── logger.py          # Logging centralizado
+├── extractors/        # Extração de dados da API
+├── transformers/      # Limpeza e enriquecimento de dados
+├── loaders/           # Carregamento no PostgreSQL
+├── models/            # Modelos ORM SQLAlchemy
+├── pipeline.py        # Orquestração ETL
+└── utils/             # Utilitários compartilhados
 ```
 
 ## Setup
 
-1. Clone the repository
-2. Copy `.env.example` to `.env` and fill in your credentials
-3. Run `make dev` to install dependencies
-4. Run `make run` to execute the pipeline
+1. Clone o repositório
+2. Copie `.env.example` para `.env` e preencha suas credenciais
+3. Execute `make dev` para instalar as dependências
+4. Execute `make run` para executar o pipeline
 
-## License
+## Licença
 
 MIT
