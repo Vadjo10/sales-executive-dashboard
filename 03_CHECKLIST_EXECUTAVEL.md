@@ -5,19 +5,19 @@
 ## FASE 0: PRÉ-REQUISITOS (Antes de Começar)
 
 ### Instalações Necessárias
-- [ ] Python 3.11+ instalado
-- [ ] PostgreSQL 14+ instalado e rodando
-- [ ] Git instalado
+- [x] Python 3.11+ instalado
+- [x] PostgreSQL 14+ instalado e rodando
+- [x] Git instalado
 - [ ] Power BI Desktop instalado
 - [ ] VSCode ou IDE de preferência
 - [ ] Postman (opcional, para testar API)
 
 ### Setup Inicial
-- [ ] Criar repositório no GitHub (public para portfolio)
-- [ ] Clonar repositório localmente
+- [x] Criar repositório no GitHub (public para portfolio)
+- [x] Clonar repositório localmente
 - [ ] Criar branch `develop` como principal de trabalho
-- [ ] Criar arquivo `.gitignore` (incluir venv/, .env, __pycache__/, *.db)
-- [ ] Criar arquivo `README.md` inicial
+- [x] Criar arquivo `.gitignore` (incluir venv/, .env, __pycache__/, *.db)
+- [x] Criar arquivo `README.md` inicial
 
 ---
 
@@ -26,45 +26,45 @@
 ### Semana 1 - Setup do Ambiente
 
 #### 1.1 - Estrutura de Diretórios
-- [ ] Criar estrutura de diretórios conforme documento técnico
-- [ ] Criar arquivo `requirements.txt` com dependências
-- [ ] Criar arquivo `requirements-dev.txt` com dev dependencies
-- [ ] Criar arquivo `.env.example`
-- [ ] Criar `Makefile` com comandos úteis
+- [x] Criar estrutura de diretórios conforme documento técnico
+- [x] Criar arquivo `requirements.txt` com dependências
+- [x] Criar arquivo `requirements-dev.txt` com dev dependencies
+- [x] Criar arquivo `.env.example`
+- [x] Criar `Makefile` com comandos úteis
 
 #### 1.2 - Ambiente Python
 ```bash
 # Comandos a executar:
-- [ ] python -m venv venv
-- [ ] source venv/bin/activate
-- [ ] pip install -r requirements.txt
-- [ ] pip install -r requirements-dev.txt
+- [x] python -m venv venv
+- [x] source venv/bin/activate
+- [x] pip install -r requirements.txt
+- [x] pip install -r requirements-dev.txt
 ```
 
 #### 1.3 - Configuração de Logging
-- [ ] Criar arquivo `src/logger.py`
-- [ ] Configurar logging centralizado
-- [ ] Testar logging em arquivo e console
-- [ ] Documentar estrutura de logs
+- [x] Criar arquivo `src/logger.py`
+- [x] Configurar logging centralizado
+- [x] Testar logging em arquivo e console
+- [x] Documentar estrutura de logs
 
 #### 1.4 - Exploração da API
-- [ ] Acessar https://fakestoreapi.com/docs
-- [ ] Testar cada endpoint com curl/Postman
-- [ ] Documentar estrutura de resposta em JSON
-- [ ] Identificar campos, tipos e possíveis nulos
+- [x] Acessar https://fakestoreapi.com/docs
+- [x] Testar cada endpoint com curl/Postman
+- [x] Documentar estrutura de resposta em JSON
+- [x] Identificar campos, tipos e possíveis nulos
 - [ ] Criar notebook exploratório: `01_exploracao_api.ipynb`
 
 #### 1.5 - Documentação Inicial
-- [ ] Criar `docs/ARQUITETURA.md` com diagrama
-- [ ] Criar `docs/API_MAPPING.md` mapeando endpoints
+- [x] Criar `docs/ARQUITETURA.md` com diagrama
+- [x] Criar `docs/API_MAPPING.md` mapeando endpoints
 - [ ] Criar `docs/DICIONARIO_DADOS.md` (inicial)
 - [ ] Documentar schema ERD esperado
 
 #### 1.6 - Versionamento
-- [ ] Fazer commit inicial: "Initial project setup"
+- [x] Fazer commit inicial: "Initial project setup"
 - [ ] Criar tag v0.1.0
-- [ ] Revisar .gitignore
-- [ ] Fazer push para repositório
+- [x] Revisar .gitignore
+- [x] Fazer push para repositório
 
 ---
 
@@ -73,56 +73,56 @@
 ### Semana 2 - Implementação do Extrator
 
 #### 2.1 - Classes Base
-- [ ] Criar `src/extractors/base_extractor.py` (classe abstrata)
-- [ ] Definir interface padrão
-- [ ] Implementar tratamento genérico de erros
-- [ ] Criar exceções customizadas: `src/utils/exceptions.py`
+- [x] Criar `src/extractors/base_extractor.py` (classe abstrata)
+- [x] Definir interface padrão
+- [x] Implementar tratamento genérico de erros
+- [x] Criar exceções customizadas: `src/utils/exceptions.py`
 
 #### 2.2 - Cliente HTTP
-- [ ] Criar `src/extractors/api_client.py`
-- [ ] Implementar session com retry logic
-- [ ] Adicionar tratamento de timeout
-- [ ] Testar conectividade com API
+- [x] Criar `src/extractors/api_client.py`
+- [x] Implementar session com retry logic
+- [x] Adicionar tratamento de timeout
+- [x] Testar conectividade com API
 
 #### 2.3 - Extrator Principal
-- [ ] Criar `src/extractors/fake_store_extractor.py`
-- [ ] Implementar `extract_products()`
-- [ ] Implementar `extract_categories()`
-- [ ] Implementar `extract_users()`
-- [ ] Implementar `extract_carts()`
-- [ ] Implementar `extract_all()`
-- [ ] Adicionar logging em cada método
+- [x] Criar `src/extractors/fake_store_extractor.py`
+- [x] Implementar `extract_products()`
+- [x] Implementar `extract_categories()`
+- [x] Implementar `extract_users()`
+- [x] Implementar `extract_carts()`
+- [x] Implementar `extract_all()`
+- [x] Adicionar logging em cada método
 
 #### 2.4 - Testes Unitários
-- [ ] Criar `tests/test_extractors.py`
-- [ ] Testar cada método com mocks
-- [ ] Testar tratamento de erros
-- [ ] Testar retry logic
+- [x] Criar `tests/test_extractors.py`
+- [x] Testar cada método com mocks
+- [x] Testar tratamento de erros
+- [x] Testar retry logic
 - [ ] Atingir 80%+ cobertura
 
 #### 2.5 - Integração Inicial
-- [ ] Criar script `scripts/test_extraction.py`
-- [ ] Executar extração real da API
-- [ ] Validar dados recebidos
-- [ ] Armazenar amostra em JSON para futuro
+- [x] Criar script `scripts/test_api_data.py`
+- [x] Executar extração real da API
+- [x] Validar dados recebidos
+- [x] Armazenar amostra em JSON para futuro
 
 #### 2.6 - Commit
-- [ ] Commit: "Implement data extraction layer"
+- [x] Commit: "Implement data extraction layer"
 - [ ] Tag: v0.2.0
-- [ ] Push para develop
+- [x] Push para repositório
 
 ### Semana 3 - Refinamentos de Extração
 
 #### 3.1 - Validações
 - [ ] Adicionar validação de schema com Pydantic
-- [ ] Validar tipos de dados
-- [ ] Detectar valores nulos inesperados
+- [x] Validar tipos de dados
+- [x] Detectar valores nulos inesperados
 - [ ] Registrar rejeições
 
 #### 3.2 - Error Handling
-- [ ] Implementar retry com backoff exponencial
+- [x] Implementar retry com backoff exponencial
 - [ ] Adicionar circuit breaker
-- [ ] Logging detalhado de erros
+- [x] Logging detalhado de erros
 - [ ] Criação de relatório de erros
 
 #### 3.3 - Performance
@@ -132,16 +132,10 @@
 - [ ] Documentar tempos de execução
 
 #### 3.4 - Testes Integrados
-- [ ] Testar fluxo completo de extração
-- [ ] Validar volume de dados
+- [x] Testar fluxo completo de extração
+- [x] Validar volume de dados
 - [ ] Testar com falhas simuladas
 - [ ] Documentar tempo de execução
-
-#### 3.5 - Documentação
-- [ ] Atualizar `docs/API_MAPPING.md`
-- [ ] Criar guia de troubleshooting
-- [ ] Documentar padrões de erro conhecidos
-- [ ] Criar exemplos de uso
 
 #### 3.6 - Commit
 - [ ] Commit: "Add validation and error handling"
@@ -155,47 +149,38 @@
 ### Semana 4 - Data Cleaning
 
 #### 4.1 - Implementação Base
-- [ ] Criar `src/transformers/base_transformer.py`
-- [ ] Criar `src/transformers/data_cleaner.py`
-- [ ] Implementar `clean_products()`
-- [ ] Implementar `clean_users()`
-- [ ] Implementar `clean_carts()`
-- [ ] Adicionar renomeação de colunas
+- [x] Criar `src/transformers/base_transformer.py`
+- [x] Criar `src/transformers/data_cleaner.py`
+- [x] Implementar `clean_products()` (genérico)
+- [x] Implementar `clean_users()` (genérico)
+- [x] Implementar `clean_carts()` (genérico)
+- [x] Adicionar renomeação de colunas
 
 #### 4.2 - Limpeza Detalhada
-- [ ] Conversão de tipos de dados
-- [ ] Tratamento de valores nulos
-- [ ] Remoção de duplicatas
-- [ ] Limpeza de espaços em branco
-- [ ] Normalização de texto
+- [x] Conversão de tipos de dados
+- [x] Tratamento de valores nulos
+- [x] Remoção de duplicatas
+- [x] Limpeza de espaços em branco
+- [x] Normalização de texto
 
 #### 4.3 - Enriquecimento
-- [ ] Criar `src/transformers/data_enricher.py`
-- [ ] Adicionar timestamps de processamento
+- [x] Criar `src/transformers/data_enricher.py`
+- [x] Adicionar timestamps de processamento
 - [ ] Calcular agregações simples
 - [ ] Criar flags de qualidade
 
 #### 4.4 - Testes
-- [ ] Criar `tests/test_transformers.py`
-- [ ] Testar cada transformação
-- [ ] Validar saída esperada
-- [ ] Testar edge cases
-
-#### 4.5 - Documentação
-- [ ] Documentar regras de limpeza
-- [ ] Criar exemplos antes/depois
-- [ ] Listar decisões de design
-
-#### 4.6 - Commit
-- [ ] Commit: "Implement data cleaning and enrichment"
-- [ ] Tag: v0.4.0
+- [x] Criar `tests/test_transformers.py`
+- [x] Testar cada transformação
+- [x] Validar saída esperada
+- [x] Testar edge cases
 
 ### Semana 5 - Validação e Quality
 
 #### 5.1 - Validações
-- [ ] Criar `src/transformers/validators.py`
-- [ ] Validar ranges de valores (preços, quantidades)
-- [ ] Validar padrões (email, telefone)
+- [x] Criar `src/utils/validators.py`
+- [x] Validar ranges de valores (preços, quantidades)
+- [x] Validar padrões (email, telefone)
 - [ ] Validar integridade referencial
 
 #### 5.2 - Great Expectations
@@ -211,21 +196,17 @@
 - [ ] Alertas para anomalias
 
 #### 5.4 - Pipeline ETL
-- [ ] Criar `src/pipeline.py`
-- [ ] Orquestrar extract → transform → validate
-- [ ] Implementar error handling
-- [ ] Logging de cada etapa
+- [x] Criar `src/pipeline.py`
+- [x] Orquestrar extract → transform → load
+- [x] Implementar error handling
+- [x] Logging de cada etapa
 - [ ] Checkpoint de dados
 
 #### 5.5 - Testes End-to-End
-- [ ] Testar pipeline completo
-- [ ] Validar dados transformados
+- [x] Testar pipeline completo
+- [x] Validar dados transformados
 - [ ] Testar recuperação de falhas
-- [ ] Performance do pipeline
-
-#### 5.6 - Commit
-- [ ] Commit: "Add data validation and quality checks"
-- [ ] Tag: v0.5.0
+- [x] Performance do pipeline
 
 ---
 
@@ -234,59 +215,56 @@
 ### Semana 6 - Setup PostgreSQL
 
 #### 6.1 - Banco de Dados
-- [ ] PostgreSQL instalado e rodando
-- [ ] Criar usuário de serviço: `sales_admin`
-- [ ] Criar database: `sales_db`
+- [x] PostgreSQL instalado e rodando (Docker)
+- [x] Criar usuário de serviço: `dsa`
+- [x] Criar database: `sales_db`
 - [ ] Configurar permissões
 
 #### 6.2 - Schema (Staging)
-- [ ] Criar schema `staging`
-- [ ] Executar `stg_products`
-- [ ] Executar `stg_users`
-- [ ] Executar `stg_carts`
+- [x] Criar schema `staging`
+- [x] Executar `stg_products`
+- [x] Executar `stg_users`
+- [x] Executar `stg_carts`
+- [x] Executar `stg_categories`
 - [ ] Executar `stg_cart_items`
 - [ ] Criar índices básicos
 
 #### 6.3 - Schema (Warehouse)
-- [ ] Criar schema `warehouse`
-- [ ] Executar `dim_date` (popular com datas)
-- [ ] Executar `dim_categories`
-- [ ] Executar `dim_products`
-- [ ] Executar `dim_users`
-- [ ] Executar `fct_sales`
+- [x] Criar schema `warehouse`
+- [x] Executar `dim_date` (popular com datas)
+- [x] Executar `dim_categories`
+- [x] Executar `dim_products`
+- [x] Executar `dim_users`
+- [x] Executar `fct_sales`
 - [ ] Executar índices
 
 #### 6.4 - ORM e Modelos
-- [ ] Configurar SQLAlchemy
-- [ ] Criar `src/models/staging.py`
-- [ ] Criar `src/models/warehouse.py`
-- [ ] Definir relacionamentos
+- [x] Configurar SQLAlchemy
+- [x] Criar `src/models/staging.py`
+- [x] Criar `src/models/warehouse.py`
+- [x] Definir relacionamentos
 - [ ] Testes de modelos
 
 #### 6.5 - Loader
-- [ ] Criar `src/loaders/database.py`
-- [ ] Criar `src/loaders/postgres_loader.py`
-- [ ] Implementar `load_dataframe()`
-- [ ] Implementar `execute_sql()`
+- [x] Criar `src/loaders/database.py`
+- [x] Criar `src/loaders/postgres_loader.py`
+- [x] Implementar `load_dataframe()`
+- [x] Implementar `execute_sql()`
 - [ ] Tratamento de transações
 - [ ] Rollback em caso de erro
 
 #### 6.6 - Testes
-- [ ] Criar `tests/test_loaders.py`
-- [ ] Testar conexão
-- [ ] Testar carregamento de dados
+- [x] Criar `tests/test_loaders.py`
+- [x] Testar conexão
+- [x] Testar carregamento de dados
 - [ ] Testar integridade referencial
 - [ ] Testar rollback
 
 #### 6.7 - Migrations
-- [ ] Criar `scripts/init_database.py`
-- [ ] Script executa todos os schemas
-- [ ] População de dim_date
+- [x] Criar `scripts/init_database.py`
+- [x] Script executa todos os schemas
+- [x] População de dim_date
 - [ ] Versionamento de migrations
-
-#### 6.8 - Commit
-- [ ] Commit: "Implement PostgreSQL loader"
-- [ ] Tag: v0.6.0
 
 ---
 
@@ -380,14 +358,14 @@
 ### Semana 9 - Automação e Finalização
 
 #### 9.1 - Scheduler
-- [ ] Criar `src/scheduler.py`
-- [ ] Configurar APScheduler
-- [ ] Agendar extração (ex: diariamente 02:00)
+- [x] Criar `scripts/scheduler.py`
+- [x] Configurar APScheduler
+- [x] Agendar extração (ex: diariamente 02:00)
 - [ ] Implementar notificações de erro
-- [ ] Logging de execução
+- [x] Logging de execução
 
 #### 9.2 - Scripts de Utilitário
-- [ ] Criar `scripts/run_pipeline.py` (manual)
+- [x] Criar `scripts/run_pipeline.py` (manual)
 - [ ] Criar `scripts/backup_restore.py`
 - [ ] Criar `scripts/health_check.py`
 - [ ] Criar `scripts/cleanup.py`
@@ -469,10 +447,10 @@
 
 ### Código
 - [ ] 100% das funções têm docstrings
-- [ ] 100% das funções têm type hints
+- [x] 100% das funções têm type hints
 - [ ] Nenhum warning do mypy
 - [ ] Cobertura >= 80%
-- [ ] Sem hardcoded credentials
+- [x] Sem hardcoded credentials (usamos .env)
 - [ ] Sem TODO's pendentes
 
 ### Documentação
@@ -484,11 +462,11 @@
 - [ ] Changelog atualizado
 
 ### Dados
-- [ ] Pipeline executa sem erros
-- [ ] 100% dos dados validados
+- [x] Pipeline executa sem erros
+- [x] 100% dos dados validados (test_api_data.py)
 - [ ] Zero dados duplicados indevidos
 - [ ] Integridade referencial OK
-- [ ] Logs claros e informativos
+- [x] Logs claros e informativos
 
 ### Dashboard
 - [ ] Todos os KPIs corretos
