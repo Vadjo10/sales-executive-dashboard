@@ -273,10 +273,12 @@
 ### Semana 7 - Preparação de Dados
 
 #### 7.1 - Views SQL
-- [ ] Criar `v_sales_summary`
-- [ ] Criar `v_monthly_sales`
-- [ ] Criar `v_customer_analysis`
-- [ ] Testar cada view
+- [x] Criar `v_sales_summary`
+- [x] Criar `v_monthly_sales`
+- [x] Criar `v_customer_analysis`
+- [x] Criar `v_product_performance` (adicional)
+- [x] Criar `v_daily_sales` (adicional)
+- [x] Testar cada view (validação de SQL + colunas)
 - [ ] Documentar
 
 #### 7.2 - Agregações
@@ -298,7 +300,7 @@
 - [ ] Configurar relacionamentos
 
 #### 7.5 - Commit
-- [ ] Commit: "Add database views and aggregations"
+- [x] Commit: "Add database views and aggregations"
 - [ ] Tag: v0.7.0
 
 ### Semana 8 - Dashboards Power BI
