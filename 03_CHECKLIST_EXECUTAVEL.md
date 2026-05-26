@@ -218,7 +218,7 @@
 - [x] PostgreSQL instalado e rodando (Docker)
 - [x] Criar usuário de serviço: `dsa`
 - [x] Criar database: `sales_db`
-- [ ] Configurar permissões
+- [x] Configurar permissões
 
 #### 6.2 - Schema (Staging)
 - [x] Criar schema `staging`
@@ -279,7 +279,8 @@
 - [x] Criar `v_product_performance` (adicional)
 - [x] Criar `v_daily_sales` (adicional)
 - [x] Testar cada view (validação de SQL + colunas)
-- [ ] Documentar
+- [x] Deploy no banco PostgreSQL
+- [x] Verificado com queries (14 sales, 20 products, 10 users)
 
 #### 7.2 - Agregações
 - [ ] Criar tabelas de agregação (se necessário)

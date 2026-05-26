@@ -9,7 +9,7 @@ CREATE OR REPLACE VIEW warehouse.v_sales_summary AS
 WITH cart_items AS (
     SELECT
         c.id AS cart_id,
-        c.user_id,
+        c.userid AS user_id,
         c.date::date AS sale_date,
         (item ->> 'productId')::int AS product_id,
         (item ->> 'quantity')::int AS quantity
@@ -32,10 +32,13 @@ SELECT
     ci.quantity,
     (p.price * ci.quantity) AS total_amount,
     COALESCE(u.id, 0) AS user_id,
-    COALESCE(u.name_firstname || ' ' || u.name_lastname, 'Unknown') AS user_name,
-    COALESCE(u.address_city, 'Unknown') AS city,
-    COALESCE(u.address_geolocation_lat, '0') AS lat,
-    COALESCE(u.address_geolocation_long, '0') AS lng,
+    COALESCE(
+        (u.name::jsonb ->> 'firstname') || ' ' || (u.name::jsonb ->> 'lastname'),
+        'Unknown'
+    ) AS user_name,
+    COALESCE(u.address::jsonb ->> 'city', 'Unknown') AS city,
+    COALESCE(u.address::jsonb -> 'geolocation' ->> 'lat', '0') AS lat,
+    COALESCE(u.address::jsonb -> 'geolocation' ->> 'long', '0') AS lng,
     EXTRACT(YEAR FROM ci.sale_date)::int AS year,
     EXTRACT(MONTH FROM ci.sale_date)::int AS month,
     EXTRACT(QUARTER FROM ci.sale_date)::int AS quarter,
