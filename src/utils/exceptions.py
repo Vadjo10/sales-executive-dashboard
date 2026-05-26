@@ -25,5 +25,13 @@ class DatabaseOperationError(SalesDashboardError):
     """Database operation failed."""
 
 
+class CircuitBreakerOpenError(SalesDashboardError):
+    """Circuit breaker is open, request blocked."""
+
+
+class DataRejectedError(SalesDashboardError):
+    """Data record failed validation and was rejected."""
+
+
 class PipelineError(SalesDashboardError):
     """Pipeline execution failed."""

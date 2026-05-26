@@ -114,14 +114,14 @@
 ### Semana 3 - Refinamentos de Extração
 
 #### 3.1 - Validações
-- [ ] Adicionar validação de schema com Pydantic
+- [x] Adicionar validação de schema com Pydantic
 - [x] Validar tipos de dados
 - [x] Detectar valores nulos inesperados
-- [ ] Registrar rejeições
+- [x] Registrar rejeições
 
 #### 3.2 - Error Handling
 - [x] Implementar retry com backoff exponencial
-- [ ] Adicionar circuit breaker
+- [x] Adicionar circuit breaker
 - [x] Logging detalhado de erros
 - [ ] Criação de relatório de erros
 
@@ -138,8 +138,8 @@
 - [ ] Documentar tempo de execução
 
 #### 3.6 - Commit
-- [ ] Commit: "Add validation and error handling"
-- [ ] Tag: v0.3.0
+- [x] Commit: "Add validation and error handling"
+- [x] Tag: v0.3.0
 - [ ] Push para develop
 
 ---
@@ -166,8 +166,8 @@
 #### 4.3 - Enriquecimento
 - [x] Criar `src/transformers/data_enricher.py`
 - [x] Adicionar timestamps de processamento
-- [ ] Calcular agregações simples
-- [ ] Criar flags de qualidade
+- [x] Calcular agregações simples
+- [x] Criar flags de qualidade
 
 #### 4.4 - Testes
 - [x] Criar `tests/test_transformers.py`
@@ -200,7 +200,7 @@
 - [x] Orquestrar extract → transform → load
 - [x] Implementar error handling
 - [x] Logging de cada etapa
-- [ ] Checkpoint de dados
+- [x] Checkpoint de dados
 
 #### 5.5 - Testes End-to-End
 - [x] Testar pipeline completo
@@ -250,8 +250,8 @@
 - [x] Criar `src/loaders/postgres_loader.py`
 - [x] Implementar `load_dataframe()`
 - [x] Implementar `execute_sql()`
-- [ ] Tratamento de transações
-- [ ] Rollback em caso de erro
+- [x] Tratamento de transações
+- [x] Rollback em caso de erro
 
 #### 6.6 - Testes
 - [x] Criar `tests/test_loaders.py`
@@ -448,6 +448,8 @@
 ### Código
 - [ ] 100% das funções têm docstrings
 - [x] 100% das funções têm type hints
+- [x] Validação de schema com Pydantic
+- [x] Circuit breaker na camada de API
 - [ ] Nenhum warning do mypy
 - [ ] Cobertura >= 80%
 - [x] Sem hardcoded credentials (usamos .env)
